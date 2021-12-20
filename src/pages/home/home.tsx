@@ -7,6 +7,8 @@ import Footer from 'src/shared/components/Footer';
 
 import Hero from './components/Hero';
 import Body from './components/Body';
+import Slides from './components/Slides';
+import Gallery from './components/Gallery';
 
 const Home: NextPage = () => (
   <>
@@ -18,6 +20,8 @@ const Home: NextPage = () => (
     <MainMenu />
     <Hero />
     <Body />
+    <Slides />
+    <Gallery />
     <Footer />
   </>
 );

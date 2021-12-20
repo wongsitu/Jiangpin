@@ -28,6 +28,10 @@ module.exports = {
         '88': '88px',
         '96': '96px',
         '120': '120px',
+        '160': '160px',
+        '200': '200px',
+        '1/4': '25%',
+        '1/2': '50%',
         'container-sm': '554px',
         'container-md': '768px',
         'container-lg': '1012px',
@@ -36,6 +40,7 @@ module.exports = {
       fontFamily: {
         'smooch': 'Smooch, Arial, sans-serif',
         'noto': 'Noto-Regular, Arial, sans-serif',
+        'lato': 'Lato-Regular, Arial, sans-serif',
       },
       maxWidth: {
         'container-sm': '554px',
