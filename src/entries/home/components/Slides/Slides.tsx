@@ -1,28 +1,35 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import SwiperCore, { Autoplay, Pagination, Navigation } from 'swiper';
+
+import clsx from 'clsx';
 import { slides } from './constants';
 
 // eslint-disable-next-line import/extensions
 import notEmpty from '@/src/shared/utils/notEmpty';
 
+SwiperCore.use([Autoplay, Pagination, Navigation]);
+
 const Slides = () => {
+  const [currentSlide, setCurrentSlide] = useState('');
+
   useEffect(() => {
     const observers = slides
       .map(slide => {
         const slideSection = document.getElementById(slide.id);
         const slideImg = document.getElementById(slide.imageId);
-        const slideTitle = document.getElementById(slide.titleId);
 
-        if (slideSection && slideImg && slideTitle) {
+        if (slideSection && slideImg) {
           const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
               if (entry.isIntersecting) {
-                slideImg.classList.replace('opacity-0', 'opacity-1');
-                slideTitle.classList.replace('font-regular', 'font-black');
-              } else {
-                slideImg.classList.replace('opacity-1', 'opacity-0');
-                slideTitle.classList.replace('font-black', 'font-regular');
+                setCurrentSlide(entry.target.id);
               }
             });
           });
@@ -37,7 +44,6 @@ const Slides = () => {
         return null;
       })
       .filter(notEmpty);
-    // eslint-disable-next-line prettier/prettier
 
     return () => {
       observers.forEach(section => section());
@@ -48,7 +54,7 @@ const Slides = () => {
     <div className="bg-slate-900">
       <div className="max-w-container-xl mx-auto py-48 lg:py-160">
         <h2 className="text-white text-5xl font-lato font-bold">
-          Trayectoria profesional
+          Life and career
         </h2>
         <div className="relative">
           <div className="sticky flex justify-between mt-160 top-1/2 -translate-y-1/2">
@@ -56,7 +62,12 @@ const Slides = () => {
               {slides.map(slide => (
                 <div key={slide.id} className="mb-16">
                   <p
-                    className="text-white font-noto font-regular"
+                    className={clsx(
+                      'text-white',
+                      currentSlide === slide.id
+                        ? 'font-lato font-bold text-2xl'
+                        : 'font-noto font-regular',
+                    )}
                     id={slide.titleId}
                   >
                     {slide.title}
@@ -69,19 +80,35 @@ const Slides = () => {
                 <div
                   key={slide.id}
                   id={slide.imageId}
-                  className="absolute opacity-0 transition-opacity w-full"
+                  className={clsx(
+                    'absolute transition-opacity w-full',
+                    currentSlide === slide.id ? 'opacity-1' : 'opacity-0',
+                  )}
                 >
-                  <Image
-                    src={slide.image}
-                    layout="responsive"
-                    loader={({ src }) => src}
-                    objectFit="fill"
-                    loading="lazy"
-                    objectPosition="bottom"
-                    quality={100}
-                    placeholder="blur"
-                    unoptimized
-                  />
+                  <Swiper
+                    spaceBetween={0}
+                    centeredSlides
+                    autoplay={{
+                      delay: 2500,
+                      disableOnInteraction: false,
+                    }}
+                  >
+                    {slide.images.map(slideImages => (
+                      <SwiperSlide key={slideImages.id}>
+                        <Image
+                          src={slideImages.img}
+                          layout="responsive"
+                          loader={({ src }) => src}
+                          objectFit="fill"
+                          loading="lazy"
+                          objectPosition="bottom"
+                          quality={100}
+                          placeholder="blur"
+                          unoptimized
+                        />
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
                 </div>
               ))}
             </div>

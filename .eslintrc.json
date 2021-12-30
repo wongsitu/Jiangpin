@@ -12,9 +12,6 @@
     "plugin:import/typescript",
     "prettier"
   ],
-  "parserOptions": {
-    "project": "tsconfig.json"
-  },
   "rules": {
     "prettier/prettier": [
       "error",
