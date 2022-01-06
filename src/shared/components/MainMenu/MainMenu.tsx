@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
+import Link from 'next/link';
 
 const MainMenu = () => {
   const [isSticky, setPosition] = useState(false);
@@ -40,43 +41,53 @@ const MainMenu = () => {
           'transition-all ease-in',
         )}
       >
-        <div className="p-16 max-w-container-xl mx-auto flex justify-between items-center">
-          <h1
-            className={clsx(
-              'text-3xl font-smooch',
-              isSticky ? 'text-black' : 'text-white',
-            )}
-          >
-            Jiangpin
-          </h1>
+        <div className="container py-16 flex justify-between items-center">
+          <Link href="/">
+            <a href="/">
+              <h1
+                className={clsx(
+                  'text-3xl font-smooch',
+                  isSticky ? 'text-black' : 'text-white',
+                )}
+              >
+                Jiangpin
+              </h1>
+            </a>
+          </Link>
           <div className="flex items-center">
-            <button
-              type="button"
-              className={clsx(
-                'font-noto mx-16',
-                isSticky ? 'text-black' : 'text-white',
-              )}
-            >
-              Gallery
-            </button>
-            <button
-              type="button"
-              className={clsx(
-                'font-noto mx-16',
-                isSticky ? 'text-black' : 'text-white',
-              )}
-            >
-              Trabajos
-            </button>
-            <button
-              type="button"
-              className={clsx(
-                'font-noto mx-16',
-                isSticky ? 'text-black' : 'text-white',
-              )}
-            >
-              Contacto
-            </button>
+            <Link href="/gallery">
+              <a
+                href="/gallery"
+                className={clsx(
+                  'font-noto mx-16',
+                  isSticky ? 'text-black' : 'text-white',
+                )}
+              >
+                Gallery
+              </a>
+            </Link>
+            <Link href="/">
+              <a
+                href="/"
+                className={clsx(
+                  'font-noto mx-16',
+                  isSticky ? 'text-black' : 'text-white',
+                )}
+              >
+                Trabajos
+              </a>
+            </Link>
+            <Link href="/about">
+              <a
+                href="/about"
+                className={clsx(
+                  'font-noto mx-16',
+                  isSticky ? 'text-black' : 'text-white',
+                )}
+              >
+                Contacto
+              </a>
+            </Link>
           </div>
         </div>
       </div>

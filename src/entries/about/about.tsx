@@ -1,5 +1,11 @@
 import React from 'react';
 
-const About = () => <div>About 1</div>;
+import MainMenu from '@/src/shared/components/MainMenu';
+
+const About = () => (
+  <div>
+    <MainMenu />
+  </div>
+);
 
 export default About;
