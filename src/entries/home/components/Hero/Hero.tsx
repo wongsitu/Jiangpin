@@ -2,28 +2,71 @@ import React, { useState } from 'react';
 
 import Image from 'next/image';
 
-import { HeroContainer, StyledIntroCard } from './Hero.styles';
+import {
+  HeroBackgroundContainer,
+  HeroContainer,
+  StyledIntroCard,
+} from './Hero.styles';
 
 const Hero = () => {
   const [loaded, setIsLoaded] = useState(false);
 
   return (
     <div className="relative">
-      <Image
-        src={require('./assets/images/banner.webp')}
-        layout="responsive"
-        loader={({ src }) => src}
-        objectFit="fill"
-        loading="lazy"
-        objectPosition="bottom"
-        className="z-0"
-        quality={100}
-        placeholder="blur"
-        unoptimized
-        onLoad={() => {
-          setIsLoaded(true);
-        }}
-      />
+      <HeroBackgroundContainer>
+        <div className="absolute inset-0">
+          <Image
+            src={require('./assets/images/banner3.webp')}
+            id="banner3"
+            layout="fill"
+            loader={({ src }) => src}
+            objectFit="cover"
+            loading="lazy"
+            objectPosition="center"
+            className="z-0"
+            quality={100}
+            placeholder="blur"
+            onLoad={() => {
+              setIsLoaded(true);
+            }}
+          />
+        </div>
+        <div className="absolute inset-0">
+          <Image
+            src={require('./assets/images/banner2.webp')}
+            id="banner2"
+            layout="fill"
+            loader={({ src }) => src}
+            objectFit="cover"
+            loading="lazy"
+            objectPosition="center"
+            className="z-0"
+            quality={100}
+            placeholder="blur"
+            onLoad={() => {
+              setIsLoaded(true);
+            }}
+          />
+        </div>
+        <div className="absolute inset-0">
+          <Image
+            src={require('./assets/images/banner1.webp')}
+            id="banner1"
+            layout="fill"
+            loader={({ src }) => src}
+            objectFit="cover"
+            loading="lazy"
+            objectPosition="center"
+            className="z-0"
+            quality={100}
+            placeholder="blur"
+            onLoad={() => {
+              setIsLoaded(true);
+            }}
+          />
+        </div>
+      </HeroBackgroundContainer>
+
       <HeroContainer className="absolute inset-0 z-10">
         {loaded && (
           <StyledIntroCard className="container h-full flex items-center">
