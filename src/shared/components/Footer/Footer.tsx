@@ -4,7 +4,7 @@ import { footerLinks } from './constants';
 
 const Footer = () => (
   <footer className="bg-black">
-    <div className="container px-16 py-32 flex">
+    <div className="container py-32 flex">
       <div className="flex w-full">
         {footerLinks.map(({ label, links }) => (
           <div key={label} className="w-1/4">

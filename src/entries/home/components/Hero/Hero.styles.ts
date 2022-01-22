@@ -48,19 +48,19 @@ export const HeroBackgroundContainer = styled.div`
     top: 0;
     -webkit-animation-name: ${fade};
     -webkit-animation-iteration-count: infinite;
-    -webkit-animation-duration: 12s;
+    -webkit-animation-duration: 9s;
     animation-name: ${fade};
     animation-iteration-count: infinite;
-    animation-duration: 12s;
+    animation-duration: 9s;
   }
 
   #banner2 {
-    animation-delay: -8s;
-    -webkit-animation-delay: -8s;
+    animation-delay: -6s;
+    -webkit-animation-delay: -6s;
     background-color: yellow;
   }
   #banner3 {
-    animation-delay: -4s;
-    -webkit-animation-delay: -4s;
+    animation-delay: -3s;
+    -webkit-animation-delay: -3s;
   }
 `;

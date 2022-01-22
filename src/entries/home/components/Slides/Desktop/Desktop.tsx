@@ -12,6 +12,7 @@ import clsx from 'clsx';
 import { slides } from '../constants';
 
 import notEmpty from '@/src/shared/utils/notEmpty';
+import { DesktopContainer } from './Desktop.styles';
 
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
@@ -51,8 +52,8 @@ const Slides = () => {
   }, []);
 
   return (
-    <div className="bg-slate-900">
-      <div className="container py-48 lg:py-160">
+    <DesktopContainer className="bg-slate-900">
+      <div className="container py-48 md:py-120 lg:py-160">
         <h2 className="text-white text-5xl font-lato font-bold">
           Life and career
         </h2>
@@ -130,7 +131,7 @@ const Slides = () => {
           </div>
         </div>
       </div>
-    </div>
+    </DesktopContainer>
   );
 };
 

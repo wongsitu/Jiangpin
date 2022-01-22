@@ -7,7 +7,7 @@ import Mobile from './Mobile';
 
 const Slides = () => {
   const { screens } = useTheme();
-  const isDesktop = useMediaQuery({ minWidth: screens.lg });
+  const isDesktop = useMediaQuery({ minWidth: screens.md });
 
   return isDesktop ? <Desktop /> : <Mobile />;
 };

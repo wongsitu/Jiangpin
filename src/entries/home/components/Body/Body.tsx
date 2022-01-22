@@ -5,7 +5,7 @@ import { sections } from './constants';
 
 const Body = () => (
   <div className="bg-background">
-    <div className="container py-48 lg:py-160">
+    <div className="container py-48 md:py-120 lg:py-160">
       {sections.map(({ description, id, title, image }, idx) => (
         <BodySection
           key={id}

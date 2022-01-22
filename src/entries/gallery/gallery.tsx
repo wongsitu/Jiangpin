@@ -1,10 +1,11 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import MainMenu from '@/src/shared/components/MainMenu';
 
 const Gallery = () => (
-  <div>
+  <motion.div exit={{ opacity: 0 }}>
     <MainMenu />
-  </div>
+  </motion.div>
 );
 
 export default Gallery;
