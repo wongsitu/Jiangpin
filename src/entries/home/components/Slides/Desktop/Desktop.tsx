@@ -12,6 +12,7 @@ import clsx from 'clsx';
 import { slides } from '../constants';
 
 import notEmpty from '@/src/shared/utils/notEmpty';
+import useIsVisible from '@/src/hooks/useIsVisible';
 import { DesktopContainer } from './Desktop.styles';
 
 SwiperCore.use([Autoplay, Pagination, Navigation]);
@@ -51,6 +52,8 @@ const Slides = () => {
     };
   }, []);
 
+  const isVisible = useIsVisible(sectionRef);
+
   return (
     <DesktopContainer className="bg-slate-900">
       <div className="container py-48 md:py-120 lg:py-160">
@@ -60,8 +63,12 @@ const Slides = () => {
         <div className="relative">
           <div className="sticky flex justify-between mt-160 top-1/2 -translate-y-1/2">
             <div className="w-1/4 flex flex-col justify-center">
-              {slides.map(slide => (
-                <div key={slide.id} className="mb-16">
+              {slides.map((slide, idx) => (
+                <div
+                  key={slide.id}
+                  className="mb-16"
+                  ref={slides.length - 2 === idx ? sectionRef : undefined}
+                >
                   <p
                     className={clsx(
                       'text-white',
@@ -76,7 +83,12 @@ const Slides = () => {
                 </div>
               ))}
             </div>
-            <div className="w-1/3 relative flex items-center">
+            <div
+              className={clsx(
+                'w-1/3 relative flex items-center transition-opacity',
+                isVisible ? 'opacity-1' : 'opacity-0',
+              )}
+            >
               {slides.map(slide => (
                 <div
                   key={slide.id}
@@ -114,7 +126,7 @@ const Slides = () => {
               ))}
             </div>
           </div>
-          <div className="w-1/4 ml-1/4" ref={sectionRef}>
+          <div className="w-1/3 ml-1/4">
             {slides.map(slide => (
               <div
                 key={slide.subtitle}

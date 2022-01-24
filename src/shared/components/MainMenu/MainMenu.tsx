@@ -50,7 +50,7 @@ const MainMenu = () => {
                   isSticky ? 'text-black' : 'text-white',
                 )}
               >
-                Jianping
+                JianPing
               </h1>
             </a>
           </Link>
@@ -85,7 +85,7 @@ const MainMenu = () => {
                   isSticky ? 'text-black' : 'text-white',
                 )}
               >
-                Contacto
+                About
               </a>
             </Link>
           </div>

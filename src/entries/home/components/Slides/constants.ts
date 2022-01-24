@@ -5,7 +5,7 @@ export const slides = [
     title: 'A unique start',
     subtitle: 'First steps',
     description:
-      'Yan Jianping was born in Shanghai, China, and his childhood love of painting was influenced by the Western impressionist movement. Until middle school, his impressionist style was self-taught. Most of the time keen on painting outdoor scenes, such as streets, parks, and the Shanghai Bund, he also often returned to Luoyang, Xi`an, Hangzhou, Suzhou, Qingdao, Chongqing, Chengdu and other places, painting nearly a thousand works.',
+      'Yan JianPing was born in Shanghai, China, and his childhood love of painting was influenced by the Western impressionist movement. Until middle school, his impressionist style was self-taught. Most of the time keen on painting outdoor scenes, such as streets, parks, and the Shanghai Bund, he also often returned to Luoyang, Xi`an, Hangzhou, Suzhou, Qingdao, Chongqing, Chengdu and other places, painting nearly a thousand works.',
     imageId: 'slide1',
     images: [
       {

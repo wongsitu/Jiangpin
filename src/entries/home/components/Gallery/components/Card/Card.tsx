@@ -11,7 +11,7 @@ const Card = ({
   title: string;
   description: string;
 }) => (
-  <div className="flex flex-col hover:shadow-lg transition-shadow duration-500 cursor-pointer">
+  <div className="flex flex-col hover:shadow-lg transition-shadow duration-500 cursor-pointer bg-white">
     <Image
       src={src}
       layout="intrinsic"
@@ -25,7 +25,7 @@ const Card = ({
       height={300}
       width={500}
     />
-    <div className="p-16">
+    <div className="p-24">
       <p className="mb-16 font-lato font-bold text-xl">{title}</p>
       <p className="font-noto">{description}</p>
     </div>

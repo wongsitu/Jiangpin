@@ -15,8 +15,8 @@ import Gallery from './components/Gallery';
 const Home: NextPage = () => (
   <motion.div exit={{ opacity: 0 }}>
     <Head>
-      <title>Jianping</title>
-      <meta name="description" content="Jianping" />
+      <title>JianPing</title>
+      <meta name="description" content="JianPing" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <MainMenu />
