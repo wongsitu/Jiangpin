@@ -13,28 +13,28 @@ const Gallery = () => (
       <ImagesContainer>
         <div className="w-1/4 mr-24">
           <Card
-            src={require('./assets/images/rice-paper.webp')}
+            src={require('./assets/images/rice-paper.webp?url')}
             title="Lorem ipsum dolor."
             description="sit amet consectetur adipisicing elit. Ipsam nam tenetur officiis architecto, beatae voluptatibus assumenda"
           />
         </div>
         <div className="w-1/4 mr-24">
           <Card
-            src={require('./assets/images/oleo.webp')}
+            src={require('./assets/images/oleo.webp?url')}
             title="Lorem ipsum dolor."
             description="sit amet consectetur adipisicing elit. Ipsam nam tenetur officiis architecto, beatae voluptatibus assumenda"
           />
         </div>
         <div className="w-1/4 mr-24">
           <Card
-            src={require('./assets/images/social.webp')}
+            src={require('./assets/images/social.webp?url')}
             title="Lorem ipsum dolor."
             description="sit amet consectetur adipisicing elit. Ipsam nam tenetur officiis architecto, beatae voluptatibus assumenda"
           />
         </div>
         <div className="w-1/4">
           <Card
-            src={require('./assets/images/notes.webp')}
+            src={require('./assets/images/notes.webp?url')}
             title="Lorem ipsum dolor."
             description="sit amet consectetur adipisicing elit. Ipsam nam tenetur officiis architecto, beatae voluptatibus assumenda"
           />

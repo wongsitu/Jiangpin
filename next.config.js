@@ -10,4 +10,7 @@ module.exports = {
     locales: ['en', 'es', 'cn'],
     defaultLocale: 'en',
   },
+  images: {
+    format: ['image/webp', 'image/png', 'image/jpeg'],
+  },
 };
