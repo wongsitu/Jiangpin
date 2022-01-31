@@ -17,14 +17,16 @@ const BodySection: FC<BodySectionProps> = ({
   return (
     <div
       className={clsx(
-        'flex items-center mb-120 transition-all duration-700 bg-white hover:shadow-lg',
+        'flex items-center mb-64 md:mb-120 transition-all duration-700 bg-white hover:shadow-lg',
         idx % 2 === 0 && 'flex-row-reverse',
         isVisible ? 'opacity-1 translate-y-0' : 'opacity-0 translate-y-1/4',
       )}
       ref={sectionRef}
     >
       <div className="w-1/2 sm:px-24 lg:px-48">
-        <h2 className="font-lato font-bold text-3xl mb-16">{title}</h2>
+        <h2 className="font-lato font-bold text-xl md:text-3xl mb-16">
+          {title}
+        </h2>
         <p className="font-noto">{description}</p>
       </div>
       <div

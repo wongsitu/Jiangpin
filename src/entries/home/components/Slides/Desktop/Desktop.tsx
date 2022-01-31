@@ -2,11 +2,10 @@ import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import SwiperCore, { Autoplay, Pagination, Navigation } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import SwiperCore, { Autoplay, Pagination, Navigation } from 'swiper';
 
 import clsx from 'clsx';
 import { slides } from '../constants';

@@ -66,17 +66,6 @@ const MainMenu = () => {
                 Gallery
               </a>
             </Link>
-            <Link href="/">
-              <a
-                href="/"
-                className={clsx(
-                  'font-noto mx-16',
-                  isSticky ? 'text-black' : 'text-white',
-                )}
-              >
-                Trabajos
-              </a>
-            </Link>
             <Link href="/about">
               <a
                 href="/about"

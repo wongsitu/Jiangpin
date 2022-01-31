@@ -1,17 +1,11 @@
-import React from 'react';
+import React, { FC } from 'react';
 
 import Image from 'next/image';
 
-const Card = ({
-  src,
-  title,
-  description,
-}: {
-  src: string;
-  title: string;
-  description: string;
-}) => (
-  <div className="flex flex-col hover:shadow-lg transition-shadow duration-500 cursor-pointer bg-white">
+import { CardType } from './types';
+
+const Card: FC<CardType> = ({ src, title, description }) => (
+  <div className="flex flex-col hover:shadow-lg transition-shadow duration-500 cursor-pointer bg-white h-full">
     <Image
       src={src}
       layout="intrinsic"

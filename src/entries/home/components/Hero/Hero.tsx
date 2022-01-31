@@ -70,7 +70,7 @@ const Hero = () => {
       <HeroContainer className="absolute inset-0 z-10">
         {loaded && (
           <StyledIntroCard className="container h-full flex items-center">
-            <div className="w-1/3 lg:w-1/4">
+            <div className="sm:w-1/3 lg:w-1/4">
               <h1 className="font-smooch text-4xl text-white mb-16">
                 Lorem ipsum dolor
               </h1>
