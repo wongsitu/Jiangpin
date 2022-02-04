@@ -12,7 +12,7 @@ import { slides } from '../constants';
 
 import notEmpty from '@/src/shared/utils/notEmpty';
 import useIsVisible from '@/src/hooks/useIsVisible';
-import { DesktopContainer } from './Desktop.styles';
+import { SlidesContainer } from '../Slides.styles';
 
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
@@ -54,7 +54,7 @@ const Slides = () => {
   const isVisible = useIsVisible(sectionRef);
 
   return (
-    <DesktopContainer className="bg-slate-900">
+    <SlidesContainer className="bg-slate-900">
       <div className="container py-48 md:py-120 lg:py-160">
         <h2 className="text-white text-5xl font-lato font-bold">
           Life and career
@@ -142,7 +142,7 @@ const Slides = () => {
           </div>
         </div>
       </div>
-    </DesktopContainer>
+    </SlidesContainer>
   );
 };
 

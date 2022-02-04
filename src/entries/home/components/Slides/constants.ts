@@ -34,7 +34,7 @@ export const slides = [
     id: 'section2',
     titleId: 'slide2-title',
     title: 'Life of learning',
-    subtitle: 'Education and development',
+    subtitle: 'Education',
     description:
       'In the 1970`s, he became a disciple of Mr. Liu Haisu, a Chinese painting master and was under his guidance for eight years. In 1978, he began working with oil painting and sculpture at a Shanghai studio. After the Cultural Revolution, and with the help of five others, he helped organize the first exhibition in China without government support. His master Mr. Liu Haisu personally wrote an inscription for the exhibition and cut the ribbon. In the late 70`s, he participated in the Shanghai Art Museum`s spring and autumn exhibitions.',
     imageId: 'slide2',
