@@ -59,7 +59,7 @@ const MainMenu = () => {
               <a
                 href="/gallery"
                 className={clsx(
-                  'font-noto mx-16',
+                  'font-noto mx-16 hover:font-bold',
                   isSticky ? 'text-black' : 'text-white',
                 )}
               >
@@ -70,7 +70,7 @@ const MainMenu = () => {
               <a
                 href="/about"
                 className={clsx(
-                  'font-noto mx-16',
+                  'font-noto mx-16 hover:font-bold',
                   isSticky ? 'text-black' : 'text-white',
                 )}
               >

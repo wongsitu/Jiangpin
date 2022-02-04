@@ -17,14 +17,8 @@ const Mobile = () => {
 
         if (slideSection) {
           const observer = new IntersectionObserver(entries => {
-            entries.forEach((entry, idx) => {
-              if (
-                idx === entries.length - 1 &&
-                !entry.isIntersecting &&
-                !!currentSlide
-              ) {
-                setCurrentSlide('');
-              } else if (entry.isIntersecting) {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
                 setCurrentSlide(entry.target.id);
               }
             });

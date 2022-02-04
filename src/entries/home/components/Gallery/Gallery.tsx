@@ -43,7 +43,7 @@ const cards = [
 ];
 
 const Gallery = () => (
-  <div className="bg-background">
+  <div className="bg-background relative">
     <div className="container py-48 sm:py-120 lg:py-160">
       <h2 className="text-3xl sm:text-5xl font-lato font-bold mb-32 sm:mb-80">
         Galeria y Proyectos
