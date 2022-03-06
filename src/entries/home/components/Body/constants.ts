@@ -2,7 +2,7 @@ export const sections = [
   {
     id: 'body-section1',
     image: {
-      src: require('./assets/images/image1.webp?url'),
+      src: require('./assets/images/image1.webp'),
       title: 'Lorem ipsum dolor.',
       description:
         'Ipsam nam tenetur officiis architecto, beatae voluptatibus assumenda pariatur numquam dolorum repellendus',
@@ -14,7 +14,7 @@ export const sections = [
   {
     id: 'body-section2',
     image: {
-      src: require('./assets/images/image2.webp?url'),
+      src: require('./assets/images/image2.webp'),
       title: 'Lorem ipsum dolor.',
       description:
         'Ipsam nam tenetur officiis architecto, beatae voluptatibus assumenda pariatur numquam dolorum repellendus',
@@ -26,7 +26,7 @@ export const sections = [
   {
     id: 'body-section3',
     image: {
-      src: require('./assets/images/image3.webp?url'),
+      src: require('./assets/images/image3.webp'),
       title: 'Lorem ipsum dolor.',
       description:
         'Ipsam nam tenetur officiis architecto, beatae voluptatibus assumenda pariatur numquam dolorum repellendus',

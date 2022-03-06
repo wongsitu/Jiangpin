@@ -10,23 +10,23 @@ export const slides = [
     images: [
       {
         id: 'slide1-img1',
-        img: require('./assets/images/slide1-img1.webp?url'),
+        img: require('./assets/images/slide1-img1.webp'),
       },
       {
         id: 'slide1-img2',
-        img: require('./assets/images/slide1-img2.webp?url'),
+        img: require('./assets/images/slide1-img2.webp'),
       },
       {
         id: 'slide1-img3',
-        img: require('./assets/images/slide1-img3.webp?url'),
+        img: require('./assets/images/slide1-img3.webp'),
       },
       {
         id: 'slide1-img4',
-        img: require('./assets/images/slide1-img4.webp?url'),
+        img: require('./assets/images/slide1-img4.webp'),
       },
       {
         id: 'slide1-img5',
-        img: require('./assets/images/slide1-img5.webp?url'),
+        img: require('./assets/images/slide1-img5.webp'),
       },
     ],
   },
@@ -41,15 +41,15 @@ export const slides = [
     images: [
       {
         id: 'slide2-img1',
-        img: require('./assets/images/slide2-img1.webp?url'),
+        img: require('./assets/images/slide2-img1.webp'),
       },
       {
         id: 'slide2-img2',
-        img: require('./assets/images/slide2-img2.webp?url'),
+        img: require('./assets/images/slide2-img2.webp'),
       },
       {
         id: 'slide2-img3',
-        img: require('./assets/images/slide2-img3.webp?url'),
+        img: require('./assets/images/slide2-img3.webp'),
       },
     ],
   },
@@ -64,19 +64,19 @@ export const slides = [
     images: [
       {
         id: 'slide3-img1',
-        img: require('./assets/images/slide3-img1.webp?url'),
+        img: require('./assets/images/slide3-img1.webp'),
       },
       {
         id: 'slide3-img2',
-        img: require('./assets/images/slide3-img2.webp?url'),
+        img: require('./assets/images/slide3-img2.webp'),
       },
       {
         id: 'slide3-img3',
-        img: require('./assets/images/slide3-img3.webp?url'),
+        img: require('./assets/images/slide3-img3.webp'),
       },
       {
         id: 'slide3-img4',
-        img: require('./assets/images/slide3-img4.webp?url'),
+        img: require('./assets/images/slide3-img4.webp'),
       },
     ],
   },
@@ -91,15 +91,15 @@ export const slides = [
     images: [
       {
         id: 'slide4-img1',
-        img: require('./assets/images/slide4-img1.webp?url'),
+        img: require('./assets/images/slide4-img1.webp'),
       },
       {
         id: 'slide4-img2',
-        img: require('./assets/images/slide4-img2.webp?url'),
+        img: require('./assets/images/slide4-img2.webp'),
       },
       {
         id: 'slide4-img3',
-        img: require('./assets/images/slide4-img3.webp?url'),
+        img: require('./assets/images/slide4-img3.webp'),
       },
     ],
   },

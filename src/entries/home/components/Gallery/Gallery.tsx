@@ -17,25 +17,25 @@ import Card from './components/Card';
 
 const cards = [
   {
-    src: require('./assets/images/rice-paper.webp?url'),
+    src: require('./assets/images/rice-paper.webp'),
     title: 'Lorem ipsum dolor.',
     description:
       'sit amet consectetur adipisicing elit. Ipsam nam tenetur officiis architecto, beatae voluptatibus assumenda',
   },
   {
-    src: require('./assets/images/oleo.webp?url'),
+    src: require('./assets/images/oleo.webp'),
     title: 'Adipisicing elit.',
     description:
       'sit amet consectetur adipisicing elit. Ipsam nam tenetur officiis architecto, beatae voluptatibus assumenda',
   },
   {
-    src: require('./assets/images/social.webp?url'),
+    src: require('./assets/images/social.webp'),
     title: 'Ipsam nam tenetur.',
     description:
       'sit amet consectetur adipisicing elit. Ipsam nam tenetur officiis architecto, beatae voluptatibus assumenda',
   },
   {
-    src: require('./assets/images/notes.webp?url'),
+    src: require('./assets/images/notes.webp'),
     title: 'Officiis architecto.',
     description:
       'sit amet consectetur adipisicing elit. Ipsam nam tenetur officiis architecto, beatae voluptatibus assumenda',

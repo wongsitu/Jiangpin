@@ -37,15 +37,15 @@ const albums = [
     images: [
       {
         key: 'rice-paper1',
-        src: require('./assets/images/rice-paper/rice-paper1.webp?url'),
+        src: require('./assets/images/rice-paper/rice-paper1.webp'),
       },
       {
         key: 'rice-paper2',
-        src: require('./assets/images/rice-paper/rice-paper2.webp?url'),
+        src: require('./assets/images/rice-paper/rice-paper2.webp'),
       },
       {
         key: 'rice-paper3',
-        src: require('./assets/images/rice-paper/rice-paper3.webp?url'),
+        src: require('./assets/images/rice-paper/rice-paper3.webp'),
       },
     ],
   },
@@ -56,15 +56,15 @@ const albums = [
     images: [
       {
         key: 'social1',
-        src: require('./assets/images/oleo/oleo1.webp?url'),
+        src: require('./assets/images/oleo/oleo1.webp'),
       },
       {
         key: 'social2',
-        src: require('./assets/images/oleo/oleo2.webp?url'),
+        src: require('./assets/images/oleo/oleo2.webp'),
       },
       {
         key: 'social3',
-        src: require('./assets/images/oleo/oleo3.webp?url'),
+        src: require('./assets/images/oleo/oleo3.webp'),
       },
     ],
   },
@@ -75,15 +75,15 @@ const albums = [
     images: [
       {
         key: 'notes1',
-        src: require('./assets/images/oleo/oleo1.webp?url'),
+        src: require('./assets/images/oleo/oleo1.webp'),
       },
       {
         key: 'notes2',
-        src: require('./assets/images/oleo/oleo2.webp?url'),
+        src: require('./assets/images/oleo/oleo2.webp'),
       },
       {
         key: 'notes3',
-        src: require('./assets/images/oleo/oleo3.webp?url'),
+        src: require('./assets/images/oleo/oleo3.webp'),
       },
     ],
   },
