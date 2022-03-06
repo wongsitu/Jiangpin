@@ -18,15 +18,15 @@ const albums = [
     images: [
       {
         key: 'oleo1',
-        src: require('./assets/images/oleo/oleo1.webp?url'),
+        src: require('./assets/images/oleo/oleo1.webp'),
       },
       {
         key: 'oleo2',
-        src: require('./assets/images/oleo/oleo2.webp?url'),
+        src: require('./assets/images/oleo/oleo2.webp'),
       },
       {
         key: 'oleo3',
-        src: require('./assets/images/oleo/oleo3.webp?url'),
+        src: require('./assets/images/oleo/oleo3.webp'),
       },
     ],
   },
