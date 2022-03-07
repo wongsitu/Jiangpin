@@ -77,6 +77,17 @@ const MainMenu = () => {
                 About
               </a>
             </Link>
+            <Link href="/contact">
+              <a
+                href="/contact"
+                className={clsx(
+                  'font-noto mx-16 hover:font-bold',
+                  isSticky ? 'text-black' : 'text-white',
+                )}
+              >
+                Contact
+              </a>
+            </Link>
           </div>
         </div>
       </div>

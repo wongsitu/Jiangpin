@@ -1,1 +1,1 @@
-export { default } from '../../entries/gallery';
+export { default } from '../../entries/album';

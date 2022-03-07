@@ -1,130 +1,68 @@
 import React from 'react';
 import { GetStaticProps } from 'next';
-import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 import Image from 'next/image';
 
-import { dehydrate, QueryClient } from 'react-query';
+import { dehydrate, QueryClient, useQueryClient } from 'react-query';
 import MainMenu from '@/src/shared/components/MainMenu';
 
-import { AlbumContainer } from './gallery.styles';
-import { fetchAlbums } from '@/src/services/albums';
+import { AlbumContainer, Background, ImageContainer } from './gallery.styles';
+import { fetchAlbums, PaginatedAlbumsResponse } from '@/src/services/albums';
 
-const albums = [
-  {
-    title: 'Lorem ipsum dolor.',
-    description:
-      'sit amet consectetur adipisicing elit. Ipsam nam tenetur officiis architecto, beatae voluptatibus assumenda',
-    images: [
-      {
-        key: 'oleo1',
-        src: require('./assets/images/oleo/oleo1.webp'),
-      },
-      {
-        key: 'oleo2',
-        src: require('./assets/images/oleo/oleo2.webp'),
-      },
-      {
-        key: 'oleo3',
-        src: require('./assets/images/oleo/oleo3.webp'),
-      },
-    ],
-  },
-  {
-    title: 'Adipisicing elit.',
-    description:
-      'sit amet consectetur adipisicing elit. Ipsam nam tenetur officiis architecto, beatae voluptatibus assumenda',
-    images: [
-      {
-        key: 'rice-paper1',
-        src: require('./assets/images/rice-paper/rice-paper1.webp'),
-      },
-      {
-        key: 'rice-paper2',
-        src: require('./assets/images/rice-paper/rice-paper2.webp'),
-      },
-      {
-        key: 'rice-paper3',
-        src: require('./assets/images/rice-paper/rice-paper3.webp'),
-      },
-    ],
-  },
-  {
-    title: 'Officiis architecto.',
-    description:
-      'sit amet consectetur adipisicing elit. Ipsam nam tenetur officiis architecto, beatae voluptatibus assumenda',
-    images: [
-      {
-        key: 'social1',
-        src: require('./assets/images/oleo/oleo1.webp'),
-      },
-      {
-        key: 'social2',
-        src: require('./assets/images/oleo/oleo2.webp'),
-      },
-      {
-        key: 'social3',
-        src: require('./assets/images/oleo/oleo3.webp'),
-      },
-    ],
-  },
-  {
-    title: 'Ipsam nam tenetur.',
-    description:
-      'sit amet consectetur adipisicing elit. Ipsam nam tenetur officiis architecto, beatae voluptatibus assumenda',
-    images: [
-      {
-        key: 'notes1',
-        src: require('./assets/images/oleo/oleo1.webp'),
-      },
-      {
-        key: 'notes2',
-        src: require('./assets/images/oleo/oleo2.webp'),
-      },
-      {
-        key: 'notes3',
-        src: require('./assets/images/oleo/oleo3.webp'),
-      },
-    ],
-  },
-];
+const Gallery = () => {
+  const queryClient = useQueryClient();
 
-const Gallery = () => (
-  <motion.div exit={{ opacity: 0 }}>
-    <MainMenu />
-    <div className="flex flex-wrap h-screen">
-      {albums.map(album => (
-        <div key={album.title} className="w-1/2 h-1/2 relative">
-          {album.images.map((image, idx) => (
-            <AlbumContainer
-              className="absolute inset-0 p-32 flex flex-col items-start justify-end"
-              key={image.key}
+  const response = queryClient.getQueryData<PaginatedAlbumsResponse>([
+    'getAlbums',
+  ]);
+
+  return (
+    <div>
+      <MainMenu />
+      <div className="flex flex-wrap h-screen z-10">
+        {response?.results?.map(album => (
+          <Link key={album.title} href={`/gallery/${album.slug}/`}>
+            <a
+              href={`/gallery/${album.slug}/`}
+              className="sm:w-1/2 sm:h-1/2 relative"
             >
-              <Image
-                src={image.src}
-                className={`image${idx + 1} z-0`}
-                layout="fill"
-                loader={({ src }) => src}
-                objectFit="cover"
-                loading="lazy"
-                objectPosition="center"
-                quality={100}
-                placeholder="blur"
-                unoptimized
-              />
-              <div className="album-text">
-                <p className="text-xl font-lato font-bold mb-16 text-white">
-                  {album.title}
-                </p>
-                <p className="font-noto text-white">{album.description}</p>
-              </div>
-            </AlbumContainer>
-          ))}
-        </div>
-      ))}
+              <Background className="w-full h-full absolute z-10 p-24 flex items-end">
+                <div className="album-text">
+                  <p className="text-xl font-lato font-bold mb-16 text-white">
+                    {album.title}
+                  </p>
+                  <p className="font-noto text-white description">
+                    {album.description}
+                  </p>
+                </div>
+              </Background>
+              {album.photos.map((image, idx) => (
+                <AlbumContainer key={image.id}>
+                  <div className="absolute inset-0 p-32 flex flex-col items-start justify-end z-0">
+                    <ImageContainer images={album.photos.length}>
+                      <Image
+                        src={image.imageUrl}
+                        className={`image${idx + 1}`}
+                        layout="fill"
+                        loader={({ src }) => src}
+                        objectFit="cover"
+                        loading="lazy"
+                        objectPosition="center"
+                        quality={100}
+                        unoptimized
+                      />
+                    </ImageContainer>
+                  </div>
+                </AlbumContainer>
+              ))}
+            </a>
+          </Link>
+        ))}
+      </div>
     </div>
-  </motion.div>
-);
+  );
+};
 
 export const getStaticProps: GetStaticProps = async () => {
   const queryClient = new QueryClient();
