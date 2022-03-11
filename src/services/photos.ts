@@ -13,8 +13,9 @@ export type PhotosResponse = {
 };
 
 type PhotoVariables = {
-  pageSize: number;
-  isThumbnail: boolean;
+  slug: string;
+  pageSize?: number;
+  isThumbnail?: boolean;
 };
 
 export type PaginatedPhotosResponse = PaginatedResult<PhotosResponse>;

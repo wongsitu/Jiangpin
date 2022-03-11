@@ -25,14 +25,14 @@ const Gallery = () => {
           <Link key={album.title} href={`/gallery/${album.slug}/`}>
             <a
               href={`/gallery/${album.slug}/`}
-              className="sm:w-1/2 sm:h-1/2 relative"
+              className="w-full h-200 sm:w-1/2 sm:h-1/2 relative"
             >
               <Background className="w-full h-full absolute z-10 p-24 flex items-end">
                 <div className="album-text">
-                  <p className="text-xl font-lato font-bold mb-16 text-white">
+                  <p className="text-sm sm:text-xl font-lato font-bold mb-8 sm:mb-16 text-white">
                     {album.title}
                   </p>
-                  <p className="font-noto text-white description">
+                  <p className="text-xs sm:text-sm font-noto text-white description">
                     {album.description}
                   </p>
                 </div>

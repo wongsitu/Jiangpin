@@ -1,1 +1,1 @@
-export { default } from '../../entries/album';
+export { default, getStaticProps, getStaticPaths } from '../../entries/album';
