@@ -1,32 +1,37 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { FC, useEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
 import Link from 'next/link';
+import { MainMenuProps } from './types';
 
-const MainMenu = () => {
+const MainMenu: FC<MainMenuProps> = ({ notTransparent }) => {
   const [isSticky, setPosition] = useState(false);
   const ref = useRef<HTMLHeadElement>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([e]) => {
-        if (e.intersectionRatio < 1) {
-          setPosition(true);
-        } else {
-          setPosition(false);
-        }
-      },
-      { threshold: [1] },
-    );
+    if (!notTransparent) {
+      const observer = new IntersectionObserver(
+        ([e]) => {
+          if (e.intersectionRatio < 1) {
+            setPosition(true);
+          } else {
+            setPosition(false);
+          }
+        },
+        { threshold: [1] },
+      );
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => {
       if (ref.current) {
-        observer.unobserve(ref.current);
+        observer.observe(ref.current);
       }
-    };
+
+      return () => {
+        if (ref.current) {
+          observer.unobserve(ref.current);
+        }
+      };
+    }
+    setPosition(true);
+    return () => {};
   }, []);
 
   return (

@@ -1,5 +1,6 @@
 import React from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
+import Image from 'next/image';
 import { dehydrate, QueryClient, useQueryClient } from 'react-query';
 import MainMenu from '@/src/shared/components/MainMenu';
 import { fetchPhotos, PaginatedPhotosResponse } from '@/src/services/photos';
@@ -14,8 +15,26 @@ const AlbumDetail = () => {
 
   return (
     <div>
-      <MainMenu />
-      {JSON.stringify(response)}
+      <MainMenu notTransparent />
+      <div className="container mb-48 mt-96 md:mt-120">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-24 md:gap-32">
+          {response?.results.map(photo => (
+            <Image
+              key={photo.id}
+              src={photo.imageUrl}
+              layout="intrinsic"
+              loader={({ src }) => src}
+              objectFit="cover"
+              loading="lazy"
+              objectPosition="center"
+              quality={100}
+              unoptimized
+              height={300}
+              width={500}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
