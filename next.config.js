@@ -16,11 +16,12 @@ module.exports = {
   images: {
     format: ['image/webp', 'image/png', 'image/jpeg'],
   },
+  trailingSlash: true,
   async rewrites() {
     return [
       {
-        source: '/api/:path*',
-        destination: `${API_URL}/api/:path*`,
+        source: '/api/:path*/',
+        destination: `${API_URL}/api/:path*/`,
       },
     ];
   },

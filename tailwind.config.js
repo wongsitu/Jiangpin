@@ -5,8 +5,10 @@ module.exports = {
       colors: {
         white: '#ffff',
         background: '#f3f3f3',
-        'base-100': '#14161c',
-        'base-80': '#14161c',
+        transparent: 'rgba(0, 0, 0, 0)',
+        gray20: 'rgba(26, 26, 26, 0.2)',
+        gray50: 'rgba(26, 26, 26, 0.5)',
+        gray80: 'rgba(26, 26, 26, 0.8)',
       },
       spacing: {
         2: '2px',

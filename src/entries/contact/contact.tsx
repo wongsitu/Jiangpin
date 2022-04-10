@@ -2,10 +2,10 @@ import React from 'react';
 
 import MainMenu from '@/src/shared/components/MainMenu';
 
-const About = () => (
+const Contact = () => (
   <div>
     <MainMenu notTransparent />
   </div>
 );
 
-export default About;
+export default Contact;

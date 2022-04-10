@@ -10,7 +10,7 @@ export type AlbumsResponse = {
   description: string;
   updatedAt: string;
   publicationDate: string;
-  photos: PhotosResponse[];
+  photos?: PhotosResponse[];
 };
 
 export type PaginatedAlbumsResponse = PaginatedResult<AlbumsResponse>;

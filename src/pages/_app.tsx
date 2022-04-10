@@ -1,4 +1,5 @@
 import React from 'react';
+import { ReactQueryDevtools } from 'react-query/devtools';
 import { Hydrate, QueryClient, QueryClientProvider } from 'react-query';
 import type { AppProps } from 'next/app';
 
@@ -10,7 +11,13 @@ import tailwindTheme from 'tailwind.config';
 
 import 'styles/globals.scss';
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+    },
+  },
+});
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
   <ThemeProvider theme={tailwindTheme.theme.extend}>
@@ -20,6 +27,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
           <Component {...pageProps} />
         </AnimatePresence>
       </Hydrate>
+      <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   </ThemeProvider>
 );
