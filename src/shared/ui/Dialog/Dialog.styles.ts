@@ -27,14 +27,13 @@ export const DialogContent = styled.div<{
   bgColor: DialogProps['bgColor'];
   size: SizeType;
 }>`
-  position: relative;
   background-color: ${({ bgColor, theme }) => bgColor || theme.colors.white};
   border-radius: ${({ size }) => (size !== 'full' ? '4px' : '0px')};
   z-index: 16000;
   ${({ size }) =>
     ({
       xs: css`
-        width: 25vw;
+        width: 35vw;
       `,
       s: css`
         width: 45vw;

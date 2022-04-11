@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import Image from 'next/image';
 import { useTheme } from 'styled-components';
 import { Dialog } from '@/src/shared/ui/Dialog';
 import { PhotoDialogProps } from './types';
@@ -20,20 +19,19 @@ const PhotoDialog: FC<PhotoDialogProps> = ({
       onDismiss={onDismiss}
       onFadeOut={onFadeOut}
       bgColor={colors.transparent}
-      size={isDesktop ? 'm' : 'l'}
+      size={isDesktop ? 'xs' : 'l'}
     >
       {photo && (
-        <Image
-          src={photo?.imageUrl}
-          layout="responsive"
-          loader={({ src }) => src}
-          objectFit="contain"
-          loading="lazy"
-          objectPosition="center"
-          quality={100}
-          height="100%"
-          width="100%"
-        />
+        <div>
+          <img src={photo?.imageUrl} alt={photo.title} className="w-full" />
+          <div className="p-16 bg-white">
+            <p className="font-lato font-bold text-xl mb-12">{photo?.title}</p>
+            <p className="font-noto text-sm">
+              {photo?.subtitle} - {photo?.publicationDate}
+            </p>
+            <p className="font-noto text-sm">{photo?.description}</p>
+          </div>
+        </div>
       )}
     </Dialog>
   );

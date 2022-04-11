@@ -1,4 +1,2 @@
-import dynamic from 'next/dynamic';
-
-export const Dialog = dynamic(() => import('./Dialog'), { ssr: false });
+export { default as Dialog } from './Dialog';
 export * from './types';
