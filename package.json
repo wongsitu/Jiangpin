@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tailwindcss/line-clamp": "0.3.1",
     "axios": "0.24.0",
     "babel-plugin-superjson-next": "^0.4.3",
     "clsx": "1.1.1",

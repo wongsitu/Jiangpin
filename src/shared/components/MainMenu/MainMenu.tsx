@@ -1,11 +1,14 @@
 import React, { FC, useEffect, useRef, useState } from 'react';
+import { useRouter } from 'next/router';
 import clsx from 'clsx';
 import Link from 'next/link';
 import { MainMenuProps } from './types';
+import i18n from './i18n';
 
 const MainMenu: FC<MainMenuProps> = ({ notTransparent }) => {
   const [isSticky, setPosition] = useState(false);
   const ref = useRef<HTMLHeadElement>(null);
+  const { locale } = useRouter();
 
   useEffect(() => {
     if (!notTransparent) {
@@ -68,7 +71,7 @@ const MainMenu: FC<MainMenuProps> = ({ notTransparent }) => {
                   isSticky ? 'text-black' : 'text-white',
                 )}
               >
-                Gallery
+                {i18n[locale as keyof typeof i18n].GALLERY}
               </a>
             </Link>
             <Link href="/about">
@@ -79,7 +82,7 @@ const MainMenu: FC<MainMenuProps> = ({ notTransparent }) => {
                   isSticky ? 'text-black' : 'text-white',
                 )}
               >
-                About
+                {i18n[locale as keyof typeof i18n].ABOUT}
               </a>
             </Link>
             <Link href="/contact">
@@ -90,7 +93,7 @@ const MainMenu: FC<MainMenuProps> = ({ notTransparent }) => {
                   isSticky ? 'text-black' : 'text-white',
                 )}
               >
-                Contact
+                {i18n[locale as keyof typeof i18n].CONTACT}
               </a>
             </Link>
           </div>

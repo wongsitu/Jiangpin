@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { camelizeKeys } from 'humps';
+import { camelizeKeys, decamelizeKeys } from 'humps';
 
 const apiClient =
   process.env.NODE_ENV === 'test'
@@ -14,9 +14,22 @@ const apiClient =
       });
 
 apiClient.interceptors.request.use(
-  config =>
-    // CODE
-    config,
+  config => {
+    const newConfig = { ...config };
+
+    if (
+      newConfig.headers &&
+      newConfig.headers['Content-Type'] === 'multipart/form-data'
+    )
+      return newConfig;
+    if (config.params) {
+      newConfig.params = decamelizeKeys(config.params);
+    }
+    if (config.data) {
+      newConfig.data = decamelizeKeys(config.data);
+    }
+    return newConfig;
+  },
   error =>
     // CODE
     Promise.reject(error),

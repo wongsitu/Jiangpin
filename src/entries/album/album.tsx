@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import useInfiniteScroll from 'react-infinite-scroll-hook';
 import { GetStaticProps, GetStaticPaths } from 'next';
-import Image from 'next/image';
+
 import { useRouter } from 'next/router';
 import { dehydrate, QueryClient } from 'react-query';
 import MainMenu from '@/src/shared/components/MainMenu';
@@ -10,6 +10,7 @@ import { fetchAlbums } from '@/src/services/albums';
 import usePhotos from '@/src/hooks/usePhotos';
 
 import PhotoDialog from './components/PhotoDialog';
+import PhotoCard from './components/PhotoCard';
 
 const AlbumDetail = () => {
   const [{ photo, open }, setPhotoDialogState] = useState<{
@@ -34,6 +35,11 @@ const AlbumDetail = () => {
     rootMargin: '0px 0px 37px 0px',
   });
 
+  const onClick = useCallback(
+    photo => setPhotoDialogState(state => ({ ...state, photo, open: true })),
+    [],
+  );
+
   return (
     <div>
       <MainMenu notTransparent />
@@ -47,51 +53,10 @@ const AlbumDetail = () => {
         </button>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-24 md:gap-32">
           {initialPhotos.map(photo => (
-            <button
-              key={photo.id}
-              type="button"
-              className="cursor-pointer"
-              onClick={() =>
-                setPhotoDialogState(state => ({ ...state, photo, open: true }))
-              }
-            >
-              <Image
-                src={photo.imageUrl}
-                layout="intrinsic"
-                loader={({ src }) => src}
-                objectFit="cover"
-                loading="eager"
-                objectPosition="center"
-                quality={100}
-                unoptimized
-                height={300}
-                width={500}
-                priority
-              />
-            </button>
+            <PhotoCard key={photo.id} photo={photo} onClick={onClick} />
           ))}
           {photos.map(photo => (
-            <button
-              key={photo.id}
-              type="button"
-              className="cursor-pointer"
-              onClick={() =>
-                setPhotoDialogState(state => ({ ...state, photo, open: true }))
-              }
-            >
-              <Image
-                src={photo.imageUrl}
-                layout="intrinsic"
-                loader={({ src }) => src}
-                objectFit="cover"
-                loading="lazy"
-                objectPosition="center"
-                quality={100}
-                unoptimized
-                height={300}
-                width={500}
-              />
-            </button>
+            <PhotoCard key={photo.id} photo={photo} onClick={onClick} />
           ))}
         </div>
         {hasNextPage && <div className="w-full" ref={ref} />}

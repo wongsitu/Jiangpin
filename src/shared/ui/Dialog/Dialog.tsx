@@ -1,8 +1,6 @@
 import React, { FC, useRef } from 'react';
 import ReactDOM from 'react-dom';
 
-import useIsClient from '@/src/hooks/useIsClient';
-
 import useClickAway from '@/src/hooks/useClickAway';
 import useLockScroll from '@/src/hooks/useLockScroll';
 
@@ -25,7 +23,6 @@ const Dialog: FC<DialogProps> = ({
   hideBackdrop,
 }) => {
   const dialogRef = useRef(null);
-  const isClient = useIsClient();
 
   useLockScroll({ lockWhen: !!open && !ignoreLockScroll });
   useClickAway({
@@ -33,10 +30,6 @@ const Dialog: FC<DialogProps> = ({
     onClickAway: onDismiss,
     ref: dialogRef,
   });
-
-  if (!isClient) {
-    return null;
-  }
 
   return ReactDOM.createPortal(
     <Presence

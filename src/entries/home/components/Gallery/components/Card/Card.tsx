@@ -12,16 +12,15 @@ const Card: FC<CardType> = ({ src, title, description }) => (
       loader={({ src }) => src}
       objectFit="cover"
       loading="lazy"
-      objectPosition="bottom"
+      objectPosition="center"
       quality={100}
-      placeholder="blur"
       unoptimized
-      height={300}
+      height={350}
       width={500}
     />
     <div className="p-24">
       <p className="mb-16 font-lato font-bold text-xl">{title}</p>
-      <p className="font-noto">{description}</p>
+      <p className="font-noto text-sm text line-clamp-5">{description}</p>
     </div>
   </div>
 );

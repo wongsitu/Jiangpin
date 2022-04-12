@@ -1,3 +1,4 @@
+import { QueryFunction, QueryKey } from 'react-query';
 import apiClient from './apiClient';
 import { PaginatedResult } from './types';
 import { PhotosResponse } from './photos';
@@ -15,5 +16,20 @@ export type AlbumsResponse = {
 
 export type PaginatedAlbumsResponse = PaginatedResult<AlbumsResponse>;
 
-export const fetchAlbums = async () =>
-  apiClient.get<PaginatedAlbumsResponse>('/api/albums/').then(res => res.data);
+type AlbumsVariables = {
+  slug: string;
+  pageSize?: number;
+};
+
+export const fetchAlbums: QueryFunction<
+  PaginatedAlbumsResponse,
+  QueryKey
+> = async ({ queryKey }) => {
+  const [, variables] = queryKey as [unknown, AlbumsVariables | undefined];
+
+  return apiClient
+    .get<PaginatedAlbumsResponse>('/api/albums/', {
+      params: { pageSize: variables?.pageSize },
+    })
+    .then(res => res.data);
+};

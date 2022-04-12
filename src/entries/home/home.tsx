@@ -1,11 +1,13 @@
 import React from 'react';
-import type { NextPage } from 'next';
+import { dehydrate, QueryClient } from 'react-query';
+import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
 
 import { motion } from 'framer-motion';
 
 import MainMenu from 'src/shared/components/MainMenu';
 import Footer from 'src/shared/components/Footer';
+import { fetchAlbums } from '@/src/services/albums';
 
 import Hero from './components/Hero';
 import Body from './components/Body';
@@ -27,5 +29,29 @@ const Home: NextPage = () => (
     <Footer />
   </motion.div>
 );
+
+export const getStaticProps: GetStaticProps = async () => {
+  const queryClient = new QueryClient();
+
+  try {
+    await queryClient.prefetchQuery(
+      ['getAlbums', { pageSize: 4 }],
+      fetchAlbums,
+    );
+
+    return {
+      props: {
+        dehydratedState: JSON.parse(JSON.stringify(dehydrate(queryClient))),
+      },
+    };
+  } catch (err) {
+    return {
+      props: {
+        dehydratedState: JSON.parse(JSON.stringify(dehydrate(queryClient))),
+      },
+      notFound: true,
+    };
+  }
+};
 
 export default Home;
