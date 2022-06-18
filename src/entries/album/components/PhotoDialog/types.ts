@@ -5,4 +5,6 @@ export type PhotoDialogProps = {
   photo?: PhotosResponse;
   onDismiss?: () => void;
   onFadeOut?: () => void;
+  onNext?: () => void;
+  onBack?: () => void;
 };

@@ -36,7 +36,8 @@ const AlbumDetail = () => {
   });
 
   const onClick = useCallback(
-    photo => setPhotoDialogState(state => ({ ...state, photo, open: true })),
+    (photo: PhotosResponse) =>
+      setPhotoDialogState(state => ({ ...state, photo, open: true })),
     [],
   );
 
@@ -90,7 +91,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { slug } = params as { slug: string };
 
   try {
-    await queryClient.prefetchQuery('getPhotos', () => fetchPhotos({ slug }));
+    await queryClient.prefetchQuery(['getPhotos', slug], ({ queryKey }) =>
+      fetchPhotos({ slug: queryKey[1] }),
+    );
 
     return {
       props: {

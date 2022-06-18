@@ -28,8 +28,10 @@ const usePhotos = () => {
   const router = useRouter();
   const { slug } = router.query as { slug: string };
   const queryClient = useQueryClient();
-  const initialData =
-    queryClient.getQueryState<PaginatedPhotosResponse>('getPhotos')?.data;
+  const initialData = queryClient.getQueryState<PaginatedPhotosResponse>([
+    'getPhotos',
+    slug,
+  ])?.data;
 
   const {
     data,
