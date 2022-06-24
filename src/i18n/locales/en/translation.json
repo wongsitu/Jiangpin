@@ -1,0 +1,15 @@
+{
+  "translation": {
+    "MAIN_MENU": {
+      "BIOGRAPHY": "Biography",
+      "GALLERY": "Gallery",
+      "NEWS": "News",
+      "EXHIBITIONS": "Exhibitions",
+      "CONTACT_US": "Contact us"
+    },
+    "HERO": {
+      "TITLE": "Lorem ipsum dolor",
+      "DESCRIPTION": "In his paintings, Jianping applies the eastern abstract conception, along with colorful Western, achieving an ingenious combination of two completely different styles, creating a space for water paint and ink, which takes you on an invisible world with delicate changes, thus showing the excited and poetic abstract painting"
+    }
+  }
+}

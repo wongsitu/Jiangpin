@@ -99,6 +99,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       props: {
         dehydratedState: JSON.parse(JSON.stringify(dehydrate(queryClient))),
       },
+      revalidate: 3600,
     };
   } catch (err) {
     return {
@@ -106,6 +107,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         dehydratedState: JSON.parse(JSON.stringify(dehydrate(queryClient))),
       },
       notFound: true,
+      revalidate: 3600,
     };
   }
 };

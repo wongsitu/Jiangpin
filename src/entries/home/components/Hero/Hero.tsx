@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 
 import {
@@ -10,6 +10,7 @@ import {
 
 const Hero = () => {
   const [loaded, setIsLoaded] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <div className="relative">
@@ -66,18 +67,15 @@ const Hero = () => {
           />
         </div>
       </HeroBackgroundContainer>
-
       <HeroContainer className="absolute inset-0 z-10">
         {loaded && (
           <StyledIntroCard className="container h-full flex items-center">
             <div className="sm:w-1/3 lg:w-1/4">
               <h1 className="font-smooch text-4xl text-white mb-16">
-                Lorem ipsum dolor
+                {t('HERO.TITLE')}
               </h1>
               <p className="font-noto text-white mb-16">
-                Doloribus quo autem vitae, exercitationem facere, laborum
-                dolorum provident sit consequatur quos expedita asperiores
-                recusandae voluptatum fugiat.
+                {t('HERO.DESCRIPTION')}
               </p>
             </div>
           </StyledIntroCard>

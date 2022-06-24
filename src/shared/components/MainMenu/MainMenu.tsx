@@ -2,6 +2,7 @@ import React, { FC, useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
 import clsx from 'clsx';
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 import { MainMenuProps } from './types';
 import i18n from './i18n';
 
@@ -9,6 +10,7 @@ const MainMenu: FC<MainMenuProps> = ({ notTransparent }) => {
   const [isSticky, setPosition] = useState(false);
   const ref = useRef<HTMLHeadElement>(null);
   const { locale } = useRouter();
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (!notTransparent) {
@@ -71,7 +73,7 @@ const MainMenu: FC<MainMenuProps> = ({ notTransparent }) => {
                   isSticky ? 'text-black' : 'text-white',
                 )}
               >
-                {i18n[locale as keyof typeof i18n].GALLERY}
+                {t('MAIN_MENU.GALLERY')}
               </a>
             </Link>
             <Link href="/about">
@@ -93,7 +95,7 @@ const MainMenu: FC<MainMenuProps> = ({ notTransparent }) => {
                   isSticky ? 'text-black' : 'text-white',
                 )}
               >
-                {i18n[locale as keyof typeof i18n].CONTACT}
+                {t('MAIN_MENU.CONTACT_US')}
               </a>
             </Link>
           </div>

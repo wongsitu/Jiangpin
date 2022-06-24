@@ -1,0 +1,15 @@
+{
+  "translation": {
+    "MAIN_MENU": {
+      "BIOGRAPHY": "简历",
+      "GALLERY": "画廊",
+      "NEWS": "新闻",
+      "EXHIBITIONS": "展览",
+      "CONTACT_US": "联系"
+    },
+    "HERO": {
+      "TITLE": "Lorem ipsum dolor",
+      "DESCRIPTION": "严坚平的画，以东方抽象的概念，结合西方鲜艳夺目的颜色，实现两种完全不同风格的巧妙结合，创造了水性涂料和油墨的空间，带你进入一个未知世界，细腻的变化，从而显示出激情与诗意的抽象绘画"
+    }
+  }
+}

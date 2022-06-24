@@ -1,0 +1,15 @@
+{
+  "translation": {
+    "MAIN_MENU": {
+      "BIOGRAPHY": "Biografia",
+      "GALLERY": "Galeria",
+      "NEWS": "Noticias",
+      "EXHIBITIONS": "Exhibiciones",
+      "CONTACT_US": "Contacto"
+    },
+    "HERO": {
+      "TITLE": "Lorem ipsum dolor",
+      "DESCRIPTION": "En sus pinturas, Jianping aplica la concepción abstracta oriental, junto con el colorido occidental, logrando una ingeniosa combinación de dos estilos completamente diferentes, creando un espacio para la pintura al agua y la tinta, que te transporta a un mundo invisible con delicados cambios, mostrando así la emocionada y pintura abstracta poética"
+    }
+  }
+}

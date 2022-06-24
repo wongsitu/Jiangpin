@@ -12,7 +12,9 @@ export const DialogContainter = styled.div`
 
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
+  padding-top: auto;
+  padding-bottom: auto;
 
   z-index: 16000;
 `;
@@ -30,19 +32,21 @@ export const DialogContent = styled.div<{
   background-color: ${({ bgColor, theme }) => bgColor || theme.colors.white};
   border-radius: ${({ size }) => (size !== 'full' ? '4px' : '0px')};
   z-index: 16000;
+  margin-top: auto;
+  margin-bottom: auto;
   ${({ size }) =>
     ({
       xs: css`
-        width: 35vw;
+        max-width: 35vw;
       `,
       s: css`
-        width: 45vw;
+        max-width: 45vw;
       `,
       m: css`
-        width: 60vw;
+        max-width: 60vw;
       `,
       l: css`
-        width: 80vw;
+        max-width: 80vw;
       `,
       full: css`
         height: 100vh;

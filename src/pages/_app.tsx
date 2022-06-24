@@ -8,6 +8,7 @@ import { ThemeProvider } from 'styled-components';
 import { AnimatePresence } from 'framer-motion';
 
 import tailwindTheme from 'tailwind.config';
+import '@/src/i18n';
 
 import 'styles/globals.scss';
 

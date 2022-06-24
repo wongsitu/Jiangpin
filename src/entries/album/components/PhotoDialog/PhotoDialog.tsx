@@ -1,5 +1,4 @@
 import React, { FC, useCallback, useEffect } from 'react';
-import { useMediaQuery } from 'react-responsive';
 import { useTheme } from 'styled-components';
 import { Dialog } from '@/src/shared/ui/Dialog';
 import { PhotoDialogProps } from './types';
@@ -12,8 +11,7 @@ const PhotoDialog: FC<PhotoDialogProps> = ({
   onNext,
   onBack,
 }) => {
-  const { colors, screens } = useTheme();
-  const isDesktop = useMediaQuery({ minWidth: screens.sm });
+  const { colors } = useTheme();
 
   const onClickRightOrLeft = useCallback((event: KeyboardEvent) => {
     if (event.key === 'ArrowRight' && onNext) {
@@ -37,7 +35,7 @@ const PhotoDialog: FC<PhotoDialogProps> = ({
       onDismiss={onDismiss}
       onFadeOut={onFadeOut}
       bgColor={colors.transparent}
-      size={isDesktop ? 'xs' : 'l'}
+      size="l"
     >
       {photo && (
         <div>
