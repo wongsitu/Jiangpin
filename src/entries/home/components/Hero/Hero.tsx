@@ -17,7 +17,7 @@ const Hero = () => {
       <HeroBackgroundContainer>
         <div className="absolute inset-0">
           <Image
-            src={require('./assets/images/banner3.webp')}
+            src={require('./assets/images/banner3.jpg')}
             id="banner3"
             layout="fill"
             loader={({ src }) => src}
@@ -34,7 +34,7 @@ const Hero = () => {
         </div>
         <div className="absolute inset-0">
           <Image
-            src={require('./assets/images/banner2.webp')}
+            src={require('./assets/images/banner2.jpg')}
             id="banner2"
             layout="fill"
             loader={({ src }) => src}

@@ -19,6 +19,7 @@ const PhotoCard: FC<PhotoCardProps> = ({ photo, onClick }) => (
       objectFit="cover"
       loading="lazy"
       objectPosition="center"
+      className="bg-slate-300"
       quality={100}
       unoptimized
       height={300}
