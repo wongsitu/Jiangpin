@@ -1,5 +1,8 @@
 {
   "translation": {
+    "LIMA": "Lima, Peru",
+    "SHANGAI": "Shangai, China",
+    "BEIJING": "Beijing, China",
     "MAIN_MENU": {
       "BIOGRAPHY": "Biography",
       "GALLERY": "Gallery",
@@ -15,9 +18,7 @@
       "INTRO": "Yan Jianping, painter residing in Peru, born in Shanghai, China, immigrated to Peru in 1985. At the beginning of the four years, Jianping remained as an amateur in drawings. Since he was a boy he studied drawing and painting by himself; and later being a disciple of Mr. Liu Haisu, a great Chinese master of painting. Impacted by the style of Western painting, especially Impressionism, Yan Jianping devoted himself to sketches in the open air for almost ten years, without the limitation of academic techniques, enabling him to paint with multi-materials, both on canvas and on paper. Chinese. In the late 1980s, he dabbled in inscriptions on the bones and shells of tortoises, pictograms, and applying unique letter symbols to paintings. Thanks to his long practice of sketches in the open air, he possesses the accumulated sensitivity of colors. In his paintings, Jianping applies the eastern abstract conception, together with the western colorful, achieving an ingenious combination of the two totally different styles, creating a painting space of water and ink, which takes you into an invisible world with delicate changes, thus showing the emotional and poetic abstract painting.",
       "HONORABLE_MENTIONS": "Honorable mentions",
       "INDIVIDUAL_PRESENTATIONS": "Individual presentations",
-      "COLECTIVE_PRESENTATIONS": "Colective presentations",
-      "LIMA": "Lima, Peru",
-      "SHANGAI": "Shangai, China"
+      "COLECTIVE_PRESENTATIONS": "Colective presentations"
     }
   }
 }
