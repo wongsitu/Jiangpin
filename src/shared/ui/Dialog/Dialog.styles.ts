@@ -34,6 +34,11 @@ export const DialogContent = styled.div<{
   z-index: 16000;
   margin-top: auto;
   margin-bottom: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   ${({ size }) =>
     ({
       xs: css`
@@ -44,9 +49,11 @@ export const DialogContent = styled.div<{
       `,
       m: css`
         max-width: 60vw;
+        height: 90vh;
       `,
       l: css`
         max-width: 80vw;
+        height: 90vh;
       `,
       full: css`
         height: 100vh;
