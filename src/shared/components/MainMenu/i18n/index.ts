@@ -1,9 +1,9 @@
-import sc from './sc';
+import tc from './tc';
 import es from './es';
 import en from './en';
 
 export default {
-  sc,
+  tc,
   es,
   en,
 };
