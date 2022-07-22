@@ -5,7 +5,7 @@ type ListElement = {
   location: string;
   title: string;
   institution: string;
-  zh?: string;
+  sc?: string;
   es?: string;
   en?: string;
 };
@@ -16,7 +16,7 @@ export const honorableMentions: ListElement[] = [
     location: i18next.t('LIMA'),
     title: '“Salón de la Acuarela”',
     institution: 'ICPNA',
-    zh: '美秘文化中心全国水彩画大奖赛',
+    sc: '美秘文化中心全国水彩画大奖赛',
     es: 'Ganador de mención Honrosa',
     en: 'Honorable mention winner',
   },
@@ -25,7 +25,7 @@ export const honorableMentions: ListElement[] = [
     location: i18next.t('LIMA'),
     title: '“Salón de la Acuarela”',
     institution: 'Museo de Arte Italiano',
-    zh: '美秘文化中心全国水彩画大奖赛',
+    sc: '美秘文化中心全国水彩画大奖赛',
     es: 'Ganador de mención Honrosa',
     en: 'Honorable mention winner',
   },
@@ -34,7 +34,7 @@ export const honorableMentions: ListElement[] = [
     location: i18next.t('LIMA'),
     title: 'Concurso Exposición de Embajada Argentina',
     institution: 'Galería Banco de Comercio',
-    zh: '美秘文化中心全国水彩画大奖赛',
+    sc: '美秘文化中心全国水彩画大奖赛',
     es: 'Ganador de mención Honrosa',
     en: 'Honorable mention winner',
   },
@@ -46,7 +46,7 @@ export const individualExhibitions: ListElement[] = [
     location: i18next.t('LIMA'),
     title: 'Exposición Individual de Dibujos y Oleos',
     institution: 'Galería Instituto Cultural Peruano Norteamericano',
-    zh: '美秘文化中心举行的第一个个人画展',
+    sc: '美秘文化中心举行的第一个个人画展',
     es: 'Ganador de mención Honrosa',
     en: 'Honorable mention winner',
   },
@@ -55,7 +55,7 @@ export const individualExhibitions: ListElement[] = [
     location: i18next.t('LIMA'),
     title: 'Exposición Individual Oleos',
     institution: 'Galería Goya',
-    zh: '戈雅艺术画廊个人画展',
+    sc: '戈雅艺术画廊个人画展',
     es: 'Ganador de mención Honrosa',
     en: 'Honorable mention winner',
   },
@@ -64,7 +64,7 @@ export const individualExhibitions: ListElement[] = [
     location: i18next.t('LIMA'),
     title: 'Exposición Individual',
     institution: 'Galería de Arte Sol',
-    zh: '太阳画廊个人画展',
+    sc: '太阳画廊个人画展',
     es: 'Ganador de mención Honrosa',
     en: 'Honorable mention winner',
   },
@@ -73,7 +73,7 @@ export const individualExhibitions: ListElement[] = [
     location: i18next.t('LIMA'),
     title: 'Exposición individual',
     institution: 'Club Empresarial',
-    zh: '企业家俱乐部个人画展',
+    sc: '企业家俱乐部个人画展',
     es: 'Ganador de mención Honrosa',
     en: 'Honorable mention winner',
   },
@@ -82,7 +82,7 @@ export const individualExhibitions: ListElement[] = [
     location: i18next.t('SHANGAI'),
     title: 'Exposición individual',
     institution: 'Gallery "Golden Apple"',
-    zh: '金苹果画廊个人画展',
+    sc: '金苹果画廊个人画展',
     es: 'Ganador de mención Honrosa',
     en: 'Honorable mention winner',
   },
@@ -112,7 +112,7 @@ export const collectiveExhibitions: ListElement[] = [
     location: i18next.t('LIMA'),
     title: 'Salón de la Acuarela',
     institution: 'Galería del ICPNA',
-    zh: '金苹果画廊个人画展',
+    sc: '金苹果画廊个人画展',
     es: 'Ganador de mención Honrosa',
     en: 'Honorable mention winner',
   },
