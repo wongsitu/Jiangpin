@@ -10,7 +10,7 @@ import {
 } from './constants';
 
 const About = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div>
@@ -46,9 +46,6 @@ const About = () => {
                   {el.title}, {el.institution}, {t(el.location as any)}{' '}
                   {el.year}
                 </p>
-                <p className="text-noto">
-                  {el[i18n.language as keyof typeof el]}
-                </p>
               </li>
             ))}
           </ul>
@@ -63,9 +60,6 @@ const About = () => {
                 <p className="text-noto font-bold">
                   {el.title}, {el.institution}, {t(el.location as any)}{' '}
                   {el.year}
-                </p>
-                <p className="text-noto">
-                  {el[i18n.language as keyof typeof el]}
                 </p>
               </li>
             ))}
@@ -82,9 +76,6 @@ const About = () => {
                   {el.title && `${el.title},`}{' '}
                   {el.institution && `${el.institution},`}{' '}
                   {t(el.location as any)} {el.year}
-                </p>
-                <p className="text-noto">
-                  {el[i18n.language as keyof typeof el]}
                 </p>
               </li>
             ))}

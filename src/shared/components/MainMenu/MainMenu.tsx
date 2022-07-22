@@ -1,15 +1,12 @@
 import React, { FC, useEffect, useRef, useState } from 'react';
-import { useRouter } from 'next/router';
 import clsx from 'clsx';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import { MainMenuProps } from './types';
-import i18n from './i18n';
 
 const MainMenu: FC<MainMenuProps> = ({ notTransparent }) => {
   const [isSticky, setPosition] = useState(false);
   const ref = useRef<HTMLHeadElement>(null);
-  const { locale } = useRouter();
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -84,7 +81,7 @@ const MainMenu: FC<MainMenuProps> = ({ notTransparent }) => {
                   isSticky ? 'text-black' : 'text-white',
                 )}
               >
-                {i18n[locale as keyof typeof i18n].ABOUT}
+                {t('MAIN_MENU.ABOUT')}
               </a>
             </Link>
             <Link href="/contact">
