@@ -1,6 +1,6 @@
 import localeES from '@/src/i18n/locales/es/translation.json';
 import localeEN from '@/src/i18n/locales/en/translation.json';
-import localeCN from '@/src/i18n/locales/cn/translation.json';
+import localeZH from '@/src/i18n/locales/zh/translation.json';
 
 declare module 'react-i18next' {
   // eslint-disable-next-line no-unused-vars
@@ -10,7 +10,7 @@ declare module 'react-i18next' {
     resources: {
       localeES: typeof localeES['translation'];
       localeEN: typeof localeEN['translation'];
-      localeCN: typeof localeCN['translation'];
+      localeZH: typeof localeZH['translation'];
     };
   }
 }

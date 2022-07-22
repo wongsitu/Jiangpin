@@ -71,9 +71,6 @@ const Hero = () => {
         {loaded && (
           <StyledIntroCard className="container h-full flex items-center">
             <div className="sm:w-1/3 lg:w-1/4">
-              <h1 className="font-smooch text-4xl text-white mb-16">
-                {t('HERO.TITLE')}
-              </h1>
               <p className="font-noto text-white mb-16">
                 {t('HERO.DESCRIPTION')}
               </p>
