@@ -10,7 +10,7 @@ module.exports = {
     includePaths: [path.join(__dirname, 'styles')],
   },
   i18n: {
-    locales: ['en', 'es', 'zh-CN'],
+    locales: ['en', 'es', 'cn'],
     defaultLocale: 'en',
   },
   images: {
