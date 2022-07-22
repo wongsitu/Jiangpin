@@ -53,7 +53,7 @@ export const DialogContent = styled.div<{
       `,
       l: css`
         max-width: 80vw;
-        height: 90vh;
+        max-height: 90vh;
       `,
       full: css`
         height: 100vh;
