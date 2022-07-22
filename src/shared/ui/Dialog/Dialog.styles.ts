@@ -29,7 +29,7 @@ export const DialogContent = styled.div<{
   bgColor: DialogProps['bgColor'];
   size: SizeType;
 }>`
-  background-color: ${({ bgColor, theme }) => bgColor || theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.white};
   border-radius: ${({ size }) => (size !== 'full' ? '4px' : '0px')};
   z-index: 16000;
   margin-top: auto;
@@ -37,7 +37,7 @@ export const DialogContent = styled.div<{
 
   display: flex;
   justify-content: center;
-  align-items: center;
+  overflow: auto;
 
   ${({ size }) =>
     ({

@@ -5,12 +5,7 @@ import { BodySectionProps } from './types';
 import AnimatedImage from '@/src/shared/components/AnimatedImage';
 import useIsVisible from '@/src/hooks/useIsVisible';
 
-const BodySection: FC<BodySectionProps> = ({
-  idx,
-  image,
-  title,
-  description,
-}) => {
+const BodySection: FC<BodySectionProps> = ({ idx, image, description }) => {
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const isVisible = useIsVisible(sectionRef);
 
@@ -24,9 +19,6 @@ const BodySection: FC<BodySectionProps> = ({
       ref={sectionRef}
     >
       <div className="'w-full sm:w-1/2 p-24 sm:py-0 lg:px-48">
-        <h2 className="font-lato font-bold text-xl md:text-3xl mb-16">
-          {title}
-        </h2>
         <p className="font-noto">{description}</p>
       </div>
       <div

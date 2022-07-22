@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "../node_modules/normalize.css/normalize.css";
+@import '../node_modules/normalize.css/normalize.css';
 
 @font-face {
   font-family: Smooch;
@@ -63,4 +63,30 @@
   src: url('../public/fonts/Lato-Bold.ttf');
   font-style: normal;
   font-weight: 400;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  border-radius: 5px;
+  height: 10px;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 5px;
+  background: #aaa;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+  z-index: 0;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
 }

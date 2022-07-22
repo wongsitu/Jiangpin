@@ -51,6 +51,7 @@ const Dialog: FC<DialogProps> = ({
           ref={dialogRef}
           className={className}
           as={as}
+          id="dialog"
         >
           {children}
         </DialogContent>

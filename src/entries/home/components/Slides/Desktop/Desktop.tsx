@@ -107,17 +107,19 @@ const Slides = () => {
                   >
                     {slide.images.map(slideImages => (
                       <SwiperSlide key={slideImages.id}>
-                        <Image
-                          src={slideImages.img}
-                          layout="responsive"
-                          loader={({ src }) => src}
-                          objectFit="fill"
-                          loading="lazy"
-                          objectPosition="bottom"
-                          quality={100}
-                          placeholder="blur"
-                          unoptimized
-                        />
+                        <div className="relative h-360 w-full">
+                          <Image
+                            src={slideImages.img}
+                            layout="fill"
+                            loader={({ src }) => src}
+                            objectFit="cover"
+                            loading="lazy"
+                            objectPosition="bottom"
+                            quality={100}
+                            placeholder="blur"
+                            unoptimized
+                          />
+                        </div>
                       </SwiperSlide>
                     ))}
                   </Swiper>
