@@ -1,4 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+
 import Image from 'next/image';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -8,6 +10,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 import clsx from 'clsx';
+
 import { slides } from '../constants';
 
 import notEmpty from '@/src/shared/utils/notEmpty';
@@ -19,6 +22,7 @@ SwiperCore.use([Autoplay, Pagination, Navigation]);
 const Slides = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [currentSlide, setCurrentSlide] = useState('');
+  const { t } = useTranslation();
 
   useEffect(() => {
     const observers = slides
@@ -57,7 +61,7 @@ const Slides = () => {
     <SlidesContainer className="bg-slate-900">
       <div className="container py-48 md:py-120 lg:py-160">
         <h2 className="text-white text-5xl font-lato font-bold">
-          Life and career
+          {t('SLIDES.TITLE')}
         </h2>
         <div className="relative">
           <div className="sticky flex justify-between mt-160 top-1/2 -translate-y-1/2">
@@ -77,7 +81,7 @@ const Slides = () => {
                     )}
                     id={slide.titleId}
                   >
-                    {slide.title}
+                    {t(slide.title)}
                   </p>
                 </div>
               ))}
@@ -135,9 +139,9 @@ const Slides = () => {
               >
                 <div id={slide.id}>
                   <p className="text-white text-3xl mb-16 font-lato font-bold">
-                    {slide.subtitle}
+                    {t(slide.subtitle)}
                   </p>
-                  <p className="text-white">{slide.description}</p>
+                  <p className="text-white">{t(slide.description)}</p>
                 </div>
               </div>
             ))}

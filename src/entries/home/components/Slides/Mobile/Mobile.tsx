@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+
 import Image from 'next/image';
 import clsx from 'clsx';
 import { SlidesContainer } from '../Slides.styles';
@@ -8,7 +10,8 @@ import { slides } from '../constants';
 import { AlbumContainer } from './Mobile.styles';
 
 const Mobile = () => {
-  const [currentSlide, setCurrentSlide] = useState(slides[0].id);
+  const [currentSlide, setCurrentSlide] = useState('');
+  const { t } = useTranslation();
 
   useEffect(() => {
     const observers = slides
@@ -44,7 +47,7 @@ const Mobile = () => {
     <SlidesContainer>
       <div className="container py-48">
         <h2 className="text-3xl sm:text-5xl font-lato font-bold mb-32 sm:mb-80 text-white">
-          Life and career
+          {t('SLIDES.TITLE')}
         </h2>
         <div className="sticky top-80 sm:top-200">
           {slides.map(slide => (
@@ -56,9 +59,11 @@ const Mobile = () => {
               )}
             >
               <p className="text-white text-3xl mb-16 font-lato font-bold">
-                {slide.subtitle}
+                {t(slide.subtitle)}
               </p>
-              <p className="text-white mb-24 sm:mb-48">{slide.description}</p>
+              <p className="text-white mb-24 sm:mb-48">
+                {t(slide.description)}
+              </p>
               <AlbumContainer>
                 {slide.images.map(({ id, img }, idx) => (
                   <div key={id} className="absolute flex justify-center w-full">
