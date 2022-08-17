@@ -49,6 +49,9 @@
     "GALLERY": {
       "TITLE": "Galería y proyectos",
       "MORE": "Ver mas"
+    },
+    "CONTACT_US": {
+      "TITLE": "Contacto"
     }
   }
 }

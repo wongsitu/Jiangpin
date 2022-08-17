@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { dehydrate, QueryClient } from 'react-query';
 import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
@@ -6,8 +6,7 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 import MainMenu from 'src/shared/components/MainMenu';
-import Footer from 'src/shared/components/Footer';
-import { useTranslation } from 'react-i18next';
+// import Footer from 'src/shared/components/Footer';
 import { fetchAlbums } from '@/src/services/albums';
 
 import Hero from './components/Hero';
@@ -15,29 +14,21 @@ import Body from './components/Body';
 import Slides from './components/Slides';
 import Gallery from './components/Gallery';
 
-const Home: NextPage = () => {
-  const { i18n } = useTranslation();
-
-  useEffect(() => {
-    i18n.changeLanguage('zh');
-  }, []);
-
-  return (
-    <motion.div exit={{ opacity: 0 }}>
-      <Head>
-        <title>JianPing</title>
-        <meta name="description" content="JianPing" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <MainMenu />
-      <Hero />
-      <Body />
-      <Slides />
-      <Gallery />
-      <Footer />
-    </motion.div>
-  );
-};
+const Home: NextPage = () => (
+  <motion.div exit={{ opacity: 0 }}>
+    <Head>
+      <title>JianPing</title>
+      <meta name="description" content="JianPing" />
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
+    <MainMenu />
+    <Hero />
+    <Body />
+    <Slides />
+    <Gallery />
+    {/* <Footer /> */}
+  </motion.div>
+);
 
 export const getStaticProps: GetStaticProps = async () => {
   const queryClient = new QueryClient();

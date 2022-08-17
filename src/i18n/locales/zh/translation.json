@@ -49,6 +49,9 @@
     "GALLERY": {
       "TITLE": "画廊 与 画展",
       "MORE": "更多展示"
+    },
+    "CONTACT_US": {
+      "TITLE": "联系信息"
     }
   }
 }

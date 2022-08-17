@@ -8,5 +8,7 @@ export const Container = styled.div`
 `;
 
 export const DataContainer = styled.div`
-  box-shadow: 0 30px 40px rgba(0, 0, 0, 0.1);
+  margin: 16px;
+  background: ${({ theme }) => theme.colors.background};
+  box-shadow: 0 0 16px 16px ${({ theme }) => theme.colors.background};
 `;

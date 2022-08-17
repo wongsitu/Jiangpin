@@ -10,7 +10,7 @@
       "GALLERY": "Gallery",
       "NEWS": "News",
       "EXHIBITIONS": "Exhibitions",
-      "CONTACT_US": "Contact us",
+      "CONTACT_US": "Contact",
       "ABOUT": "About"
     },
     "HERO": {
@@ -49,6 +49,9 @@
     "GALLERY": {
       "TITLE": "Gallery and projects",
       "MORE": "See more"
+    },
+    "CONTACT_US": {
+      "TITLE": "Contact"
     }
   }
 }
