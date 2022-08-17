@@ -4,6 +4,7 @@ import { GetStaticProps, GetStaticPaths } from 'next';
 
 import { useRouter } from 'next/router';
 import { dehydrate, QueryClient } from 'react-query';
+import { t } from 'i18next';
 import MainMenu from '@/src/shared/components/MainMenu';
 import { fetchPhotos, PhotosResponse } from '@/src/services/photos';
 import { fetchAlbums } from '@/src/services/albums';
@@ -50,7 +51,7 @@ const AlbumDetail = () => {
           className="font-noto hover:font-bold mb-32"
           onClick={() => router.back()}
         >
-          Go Back
+          {t('GO_BACK')}
         </button>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-24 md:gap-32">
           {initialPhotos.map(photo => (

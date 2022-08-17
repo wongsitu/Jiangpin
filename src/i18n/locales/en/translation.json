@@ -3,6 +3,8 @@
     "LIMA": "Lima, Peru",
     "SHANGAI": "Shangai, China",
     "BEIJING": "Beijing, China",
+    "JIANPING": "",
+    "GO_BACK": "Go back",
     "MAIN_MENU": {
       "BIOGRAPHY": "Biography",
       "GALLERY": "Gallery",
@@ -43,6 +45,10 @@
       "SLIDE4_TITLE": "Awards",
       "SLIDE4_SUBTITLE": "Recognition",
       "SLIDE4_DESCRIPTION": "In September of that year, he received an honorary award (MENCION HONROSA) at a Peru Cultural Center watercolour competition. He has gone on to receive honorary awards in Italy and Argentina. From 1987 to 2013, he has held several solo exhibitions. He has also participated in larger exhibitions in the Pedro de Osma Museum in Lima."
+    },
+    "GALLERY": {
+      "TITLE": "Gallery and projects",
+      "MORE": "See more"
     }
   }
 }

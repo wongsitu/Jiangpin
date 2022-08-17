@@ -15,11 +15,13 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
+import { useTranslation } from 'react-i18next';
 import Card from './components/Card';
 import { PaginatedAlbumsResponse } from '@/src/services/albums';
 
 const Gallery = () => {
   const queryClient = useQueryClient();
+  const { t } = useTranslation();
   const initialData = queryClient.getQueryState<PaginatedAlbumsResponse>([
     'getAlbums',
     { pageSize: 4 },
@@ -31,11 +33,11 @@ const Gallery = () => {
       <div className="container py-48 sm:py-120 lg:py-160">
         <div className="flex items-center justify-between mb-32 sm:mb-80">
           <h2 className="text-3xl sm:text-5xl font-lato font-bold">
-            Galeria y Proyectos
+            {t('GALLERY.TITLE')}
           </h2>
           <Link href="/gallery">
             <a href="/gallery" className="font-noto hover:font-bold">
-              Ver mas
+              {t('GALLERY.MORE')}
             </a>
           </Link>
         </div>

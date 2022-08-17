@@ -3,6 +3,8 @@
     "LIMA": "Lima, Peru",
     "SHANGAI": "Shangai, China",
     "BEIJING": "Beijing, China",
+    "GO_BACK": "Atras",
+    "JIANPING": "",
     "MAIN_MENU": {
       "BIOGRAPHY": "Biografia",
       "GALLERY": "Galeria",
@@ -43,6 +45,10 @@
       "SLIDE4_TITLE": "Premios",
       "SLIDE4_SUBTITLE": "Reconocimiento",
       "SLIDE4_DESCRIPTION": "Recibió la MENCIÓN HONROSA en el concurso de pintura a la acuarela, luego recibió el certificado honorífico de pintura a la acuarela del Museo de Arte Italiano en Perú, recibió la mención de honor en el concurso de dibujo peruano organizado por la Embajada Argentina, y luego ganó el Comité de Mujeres del Congreso Peruano - Organización Nacional de Salud organizó fondos de emergencia El certificado de honor otorgado por la donación, realizó varias exposiciones individuales de 1987 a 2013, y participó en muchas exposiciones de gran escala realizadas por el Museo Pedro de Osma en Lima."
+    },
+    "GALLERY": {
+      "TITLE": "Galería y proyectos",
+      "MORE": "Ver mas"
     }
   }
 }

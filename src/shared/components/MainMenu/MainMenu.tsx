@@ -50,15 +50,23 @@ const MainMenu: FC<MainMenuProps> = ({ notTransparent }) => {
       >
         <div className="container py-16 flex justify-between items-center">
           <Link href="/">
-            <a href="/">
+            <a href="/" className="flex align-bottom">
               <h1
                 className={clsx(
                   'text-3xl font-smooch',
                   isSticky ? 'text-black' : 'text-white',
                 )}
               >
-                JianPing
+                Jianping
               </h1>
+              <p
+                className={clsx(
+                  'text-sm flex items-end ml-8',
+                  isSticky ? 'text-black' : 'text-white',
+                )}
+              >
+                {t('JIANPING')}
+              </p>
             </a>
           </Link>
           <div className="flex items-center">
