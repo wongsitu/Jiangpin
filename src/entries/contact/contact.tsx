@@ -2,6 +2,7 @@ import React from 'react';
 
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
+import Link from 'next/link';
 import MainMenu from '@/src/shared/components/MainMenu';
 import { Container, DataContainer } from './contact.styles';
 
@@ -31,19 +32,32 @@ const Contact = () => {
               </h2>
               <div>
                 <span className="font-noto font-bold mr-4">Email:</span>
-                <span className="font-noto">xxxxx@xxxx.com</span>
+                <Link href="mailto:jianping312@gmail.com">
+                  <a className="font-noto" href="mailto:jianping312@gmail.com">
+                    jianping312@gmail.com
+                  </a>
+                </Link>
               </div>
               <div>
                 <span className="font-noto font-bold mr-4">WeChat:</span>
-                <span className="font-noto">xxx-xxx-xxx</span>
+                <span className="font-noto">wxid_zoei5q92napg11</span>
               </div>
               <div>
                 <span className="font-noto font-bold mr-4">Whatssap:</span>
-                <span className="font-noto">xxx-xxx-xxx</span>
+                <span className="font-noto">+51 991303416</span>
               </div>
               <div>
                 <span className="font-noto font-bold mr-4">Facebook:</span>
-                <span className="font-noto">xxx-xxx-xxx</span>
+                <Link href="https://www.facebook.com/jianping.yan.94">
+                  <a
+                    href="https://www.facebook.com/jianping.yan.94"
+                    target="_blank"
+                    className="font-noto"
+                    rel="noreferrer"
+                  >
+                    Jian Ping Yan
+                  </a>
+                </Link>
               </div>
             </DataContainer>
           </div>

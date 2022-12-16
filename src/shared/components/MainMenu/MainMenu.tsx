@@ -61,7 +61,7 @@ const MainMenu: FC<MainMenuProps> = ({ notTransparent }) => {
               </h1>
               <p
                 className={clsx(
-                  'text-sm flex items-end ml-8',
+                  'text-sm hidden sm:flex items-end ml-8',
                   isSticky ? 'text-black' : 'text-white',
                 )}
               >
