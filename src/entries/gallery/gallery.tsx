@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { useTranslation } from 'react-i18next';
 import { GetStaticProps } from 'next';
 import useInfiniteScroll from 'react-infinite-scroll-hook';
 import Link from 'next/link';
@@ -13,7 +14,17 @@ import useAlbums from '@/src/hooks/useAlbums';
 import { AlbumContainer, Background, ImageContainer } from './gallery.styles';
 
 const AlbumCard: FC<AlbumsResponse> = album => {
-  const { slug, title, description, photos } = album;
+  const {
+    slug,
+    title,
+    titleEn,
+    titleCn,
+    description,
+    photos,
+    descriptionEn,
+    descriptionCn,
+  } = album;
+  const { i18n } = useTranslation();
 
   return (
     <Link key={title} href={`/gallery/${slug}/`}>
@@ -21,10 +32,22 @@ const AlbumCard: FC<AlbumsResponse> = album => {
         <Background className="w-full h-full absolute z-10 p-24 flex items-end">
           <div className="album-text">
             <p className="text-sm sm:text-xl font-lato font-bold mb-8 sm:mb-16 text-white">
-              {title}
+              {
+                {
+                  es: description,
+                  en: titleEn,
+                  cn: titleCn,
+                }[i18n.language]
+              }
             </p>
             <p className="text-xs sm:text-sm font-noto text-white description line-clamp-6 text-ellipsis">
-              {description}
+              {
+                {
+                  es: description,
+                  en: descriptionEn,
+                  cn: descriptionCn,
+                }[i18n.language]
+              }
             </p>
           </div>
         </Background>

@@ -7,8 +7,12 @@ export type AlbumsResponse = {
   id: number;
   slug: string;
   title: string;
+  titleEn: string;
+  titleCn: string;
   subtitle: string;
   description: string;
+  descriptionEn: string;
+  descriptionCn: string;
   updatedAt: string;
   publicationDate: string;
   photos?: PhotosResponse[];
