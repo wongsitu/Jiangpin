@@ -33,7 +33,7 @@ export const fetchAlbums: QueryFunction<
 
   return apiClient
     .get<PaginatedAlbumsResponse>('/api/albums/', {
-      params: { pageSize: variables?.pageSize },
+      params: { ...variables },
     })
     .then(res => res.data);
 };
