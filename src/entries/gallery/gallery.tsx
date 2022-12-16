@@ -36,7 +36,7 @@ const AlbumCard: FC<AlbumsResponse> = album => {
                 {
                   es: title,
                   en: titleEn,
-                  cn: titleCn,
+                  zh: titleCn,
                 }[i18n.language]
               }
             </p>
@@ -45,7 +45,7 @@ const AlbumCard: FC<AlbumsResponse> = album => {
                 {
                   es: description,
                   en: descriptionEn,
-                  cn: descriptionCn,
+                  zh: descriptionCn,
                 }[i18n.language]
               }
             </p>
