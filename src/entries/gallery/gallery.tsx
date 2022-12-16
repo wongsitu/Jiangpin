@@ -34,7 +34,7 @@ const AlbumCard: FC<AlbumsResponse> = album => {
             <p className="text-sm sm:text-xl font-lato font-bold mb-8 sm:mb-16 text-white">
               {
                 {
-                  es: description,
+                  es: title,
                   en: titleEn,
                   cn: titleCn,
                 }[i18n.language]
