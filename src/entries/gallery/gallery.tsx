@@ -23,7 +23,7 @@ const AlbumCard: FC<AlbumsResponse> = album => {
             <p className="text-sm sm:text-xl font-lato font-bold mb-8 sm:mb-16 text-white">
               {title}
             </p>
-            <p className="text-xs sm:text-sm font-noto text-white description">
+            <p className="text-xs sm:text-sm font-noto text-white description line-clamp-6 text-ellipsis">
               {description}
             </p>
           </div>
